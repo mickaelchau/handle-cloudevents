@@ -8,6 +8,7 @@ app = Flask(__name__)
 # create an endpoint at http://localhost:/3000/
 @app.route("/", methods=["POST"])
 def home():
+    print("Hello world!")
     # create a CloudEvent
     event = from_http(request.headers, request.get_data())
 
